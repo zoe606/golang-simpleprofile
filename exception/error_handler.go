@@ -25,7 +25,7 @@ func validationErrors(w http.ResponseWriter, r *http.Request, err interface{}) b
 		w.WriteHeader(http.StatusBadRequest)
 		webResponse := web.Response{
 			Code:   http.StatusBadRequest,
-			Status: "bed req",
+			Status: "bad request",
 			Data:   exception.Error(),
 		}
 		helpers.WriteToResponseBody(w, webResponse)

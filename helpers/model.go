@@ -7,13 +7,13 @@ import (
 
 func ToRegisterResponse(user domain.Profile) web.RegisterResponse {
 	return web.RegisterResponse{
-		Message: " Berhasil Registrasi dengan user name " + user.Username,
+		Message: "Berhasil Registrasi dengan user name " + user.Username,
 	}
 }
 
 func ToLogoutResponse() web.LogoutResponse {
 	return web.LogoutResponse{
-		Message: " Berhasil Logout!",
+		Message: "Berhasil Logout!",
 	}
 }
 
@@ -26,6 +26,7 @@ func ToLoginResponse(user domain.Profile) web.LoginResponse {
 
 func ToProfileResponse(user domain.Profile) web.ProfileResponse {
 	return web.ProfileResponse{
+		Id:        user.Id,
 		Username:  user.Username,
 		Password:  user.Password,
 		Firstname: user.Firstname,
